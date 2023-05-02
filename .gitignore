@@ -1,8 +1,12 @@
 # Compiled class file
 *.class
 
+# Binary serialized files
+*.dat
+
 # Log file
 *.log
+*.txt
 
 # BlueJ files
 *.ctxt

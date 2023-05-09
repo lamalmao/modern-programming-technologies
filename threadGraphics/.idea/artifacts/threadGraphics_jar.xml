@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="threadGraphics:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/threadGraphics_jar</output-path>
+    <root id="archive" name="threadGraphics.jar">
+      <element id="module-output" name="threadGraphics" />
+    </root>
+  </artifact>
+</component>

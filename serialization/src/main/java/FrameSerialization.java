@@ -15,49 +15,14 @@ public class FrameSerialization {
       final CSVFrameDataReader<DigitalFrame> digitalFrameCSVFrameDataReader = new CSVFrameDataReader<>(
           "digital_frames.csv", ",", new DigitalFrame());
 
+      ArrayList<Frame> frames = new ArrayList<>();
+      frames.addAll(defaultFrameCSVFrameDataReader.readFrames());
+      frames.addAll(digitalFrameCSVFrameDataReader.readFrames());
+
       ObjectOutputStream objectOutputStream = new ObjectOutputStream(
           new FileOutputStream("frames.dat"));
-
-      final String defaultFramesFileName = defaultFrameCSVFrameDataReader.getFileName();
-      final ArrayList<DefaultFrame> defaultFrames = defaultFrameCSVFrameDataReader.readFrames();
-      System.out.println(defaultFramesFileName + ":");
-      System.out.printf("%-5s %-20s %-8s %-2s %-2s %-10s %-10s%n", "id", "model", "price", "width",
-          "height", "material", "shape");
-      for (Object frame : defaultFrames.toArray()) {
+      for (Frame frame : frames) {
         objectOutputStream.writeObject(frame);
-        System.out.println(frame.toString());
-      }
-      Journal.log(defaultFramesFileName + " data serialized to frames.dat");
-
-      final String digitalFramesFileName = digitalFrameCSVFrameDataReader.getFileName();
-      final ArrayList<DigitalFrame> digitalFrames = digitalFrameCSVFrameDataReader.readFrames();
-      System.out.println(digitalFramesFileName + ":");
-      System.out.printf("%-5s %-20s %-8s %-2s %-2s %-10s %-6s%n", "id", "model", "price", "width",
-          "height", "resolution", "memory");
-      for (Object frame : digitalFrames.toArray()) {
-        objectOutputStream.writeObject(frame);
-        System.out.println(frame.toString());
-      }
-      objectOutputStream.close();
-
-      Journal.log(digitalFramesFileName + " data serialized to frames.dat");
-
-      ObjectInputStream objectInputStream = new ObjectInputStream(
-          new FileInputStream("frames.dat"));
-
-      System.out.println("Parsing from frames.dat");
-      Object item;
-      int counter = 0;
-      while (true) {
-        try {
-          item = objectInputStream.readObject();
-          counter++;
-          
-          System.out.println(item.toString());
-        } catch (EOFException e) {
-          Journal.log(counter + " frames were serialized from frames.dat");
-          break;
-        }
       }
     } catch (Exception e) {
       final String message = "Runtime error: " + e.getMessage() + " " + e.getCause();

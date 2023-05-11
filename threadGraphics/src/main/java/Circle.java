@@ -6,7 +6,7 @@ import java.util.TimerTask;
 
 public class Circle {
 
-  private final int radius;
+  private final int diameter;
   private final Color color;
   private double vx;
   private double vy;
@@ -15,8 +15,8 @@ public class Circle {
   private boolean locked = false;
   private GraphicsPanel parent;
 
-  public Circle(int radius, Color color, double x, double y, double vx, double vy) {
-    this.radius = radius;
+  public Circle(int diameter, Color color, double x, double y, double vx, double vy) {
+    this.diameter = diameter;
     this.color = color;
     this.x = x;
     this.y = y;
@@ -29,7 +29,7 @@ public class Circle {
   }
 
   public Ellipse2D getShape() {
-    return new Ellipse2D.Double(x, y, radius, radius);
+    return new Ellipse2D.Double(x, y, diameter, diameter);
   }
 
   public void setParent(GraphicsPanel parent) {
@@ -41,29 +41,29 @@ public class Circle {
     vy *= -1;
   }
 
-  public int getRadius() {
-    return radius;
+  public int getDiameter() {
+    return diameter;
   }
 
   public void checkBordersIntersect() {
     double nextCenterX = getXCenter() + vx;
     double nextCenterY = getYCenter() + vy;
 
-    if (nextCenterX - radius <= 0 || nextCenterX + radius >= parent.getWidth()) {
+    if (nextCenterX - diameter <= 0 || nextCenterX + diameter >= parent.getWidth()) {
       vx *= -1;
     }
 
-    if (nextCenterY - radius <= 0 || nextCenterY + radius >= parent.getHeight()) {
+    if (nextCenterY - diameter <= 0 || nextCenterY + diameter >= parent.getHeight()) {
       vy *= -1;
     }
   }
 
   public double getXCenter() {
-    return x + radius;
+    return x + diameter / 2;
   }
 
   public double getYCenter() {
-    return y + radius;
+    return y + diameter / 2;
   }
 
   public void calculateStep() {

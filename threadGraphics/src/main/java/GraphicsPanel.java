@@ -1,6 +1,8 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Ellipse2D.Double;
 import java.util.List;
 import javax.swing.JPanel;
 
@@ -43,17 +45,16 @@ public class GraphicsPanel extends JPanel {
             Math.pow(figure.getXCenter() - neighbour.getXCenter(), 2) + Math.pow(
                 figure.getYCenter() - neighbour.getYCenter(), 2));
 
-        if (distance <= figure.getRadius() || distance <= neighbour.getRadius()) {
+        if (distance <= (figure.getDiameter() + neighbour.getDiameter()) / 2) {
           figure.reflect();
-          neighbour.reflect();
-
           figure.calculateStep();
-          neighbour.calculateStep();
         }
       }
 
       g2d.setColor(figure.getColor());
       g2d.fill(shape);
+      g2d.setColor(Color.BLACK);
+      g2d.fill(new Double(figure.getXCenter(), figure.getYCenter(), 2, 2));
 
       figure.unlock();
     }

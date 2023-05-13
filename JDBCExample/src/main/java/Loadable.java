@@ -24,13 +24,13 @@ public abstract class Loadable {
 
   static String getLoadObjectsUpdate(List<? extends Loadable> objects, String table) {
     String headers = objects.get(0).getValuesHeaderLine();
-    String update = "INSERT INTO " + table + " " + headers + " VALUES";
+    String update = "INSERT INTO ".concat(table).concat(" ").concat(headers).concat(" VALUES");
 
     ArrayList<String> values = new ArrayList<>();
     for (Loadable object : objects) {
       values.add(object.getValuesLine());
     }
 
-    return update + " " + String.join(",", values);
+    return update.concat(" ").concat(String.join(",", values));
   }
 }

@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Locale;
 
@@ -13,6 +14,16 @@ public class DefaultFrame extends Frame {
 
     material = "";
     shape = "";
+  }
+
+  DefaultFrame(ResultSet resultSet) throws SQLException {
+    id = resultSet.getInt("id");
+    model = resultSet.getString("model");
+    price = resultSet.getFloat("price");
+    width = resultSet.getInt("width");
+    height = resultSet.getInt("height");
+    material = resultSet.getString("material");
+    shape = resultSet.getString("shape");
   }
 
   @Override

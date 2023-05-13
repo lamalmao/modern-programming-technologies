@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Locale;
@@ -14,6 +15,16 @@ public class DigitalFrame extends Frame {
 
     this.resolution = "";
     this.memory = 0;
+  }
+
+  DigitalFrame(ResultSet resultSet) throws SQLException {
+    id = resultSet.getInt("id");
+    model = resultSet.getString("model");
+    price = resultSet.getFloat("price");
+    width = resultSet.getInt("width");
+    height = resultSet.getInt("height");
+    resolution = resultSet.getString("resolution");
+    memory = resultSet.getInt("memory");
   }
 
   @Override
@@ -48,7 +59,8 @@ public class DigitalFrame extends Frame {
   public PreparedStatement getValuesStatement(String table, Connection connection)
       throws SQLException {
     PreparedStatement statement = connection.prepareStatement(
-        "INSERT INTO " + table + " (id, model, price, width, height, resolution, memory) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        "INSERT INTO " + table
+            + " (id, model, price, width, height, resolution, memory) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
     statement.setInt(1, id);
     statement.setString(2, model);
@@ -70,7 +82,8 @@ public class DigitalFrame extends Frame {
 
   @Override
   public String getValuesLine() {
-    return String.format(Locale.US, "(%d, '%s', %.4f, %d, %d, '%s', %d)", id, model, price, width, height, resolution, memory);
+    return String.format(Locale.US, "(%d, '%s', %.4f, %d, %d, '%s', %d)", id, model, price, width,
+        height, resolution, memory);
   }
 
   @Override

@@ -2,22 +2,19 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
 public class DatabaseWorker {
 
-  private Connection connection;
+  protected Connection connection;
 
 
   private String[] loadCredentials(String filename) throws IOException {
     BufferedReader reader = new BufferedReader(new FileReader(filename));
-    String[] result = {
-        reader.readLine(),
-        reader.readLine(),
-        reader.readLine()
-    };
+    String[] result = {reader.readLine(), reader.readLine(), reader.readLine()};
     reader.close();
     return result;
   }
@@ -87,19 +84,41 @@ public class DatabaseWorker {
     statement.executeUpdate(Loadable.getLoadObjectsUpdate(objects, table));
   }
 
-  public Thread dirtyConnection(String table, String statement, Loadable newObject) {
-    Thread thread = new Thread(() -> {
-      try {
-        Statement S1 = connection.createStatement();
-        S1.executeUpdate(statement);
-        loadObjectToBase(newObject, table);
-        Thread.currentThread().interrupt();
-      } catch (SQLException e) {
-        throw new RuntimeException(e);
-      }
-    });
+  public Frame getById(int id, int type) throws SQLException {
+    PreparedStatement search = connection.prepareStatement(
+        "SELECT * FROM "
+            .concat(type == 1 ? "digital_frames" : "default_frames")
+            .concat(" WHERE id = ?")
+    );
+    search.setInt(1, id);
+    ResultSet result = search.executeQuery();
+    if (!result.next()) {
+      throw new RuntimeException("Object not found");
+    }
 
-    thread.start();
-    return thread;
+    if (type == 1) {
+      return new DigitalFrame(result);
+    } else {
+      return new DefaultFrame(result);
+    }
+  }
+
+  public ArrayList<Frame> getAllObjects(String table, int type) throws Exception, SQLException {
+    Statement search = connection.createStatement();
+    ResultSet result = search.executeQuery("SELECT * FROM ".concat(table));
+    if (!result.next()) {
+      throw new Exception("Nothing found");
+    }
+
+    ArrayList<Frame> objects = new ArrayList<>();
+    while (result.next()) {
+      if (type == 1) {
+        objects.add(new DigitalFrame(result));
+      } else {
+        objects.add(new DefaultFrame(result));
+      }
+    }
+
+    return objects;
   }
 }

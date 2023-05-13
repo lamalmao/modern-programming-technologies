@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9e6bd07-5fd8-4e81-a092-4a06223640eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BaseDOD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CSVReadable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Vendor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storages.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DirtyDatabaseWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DatabaseWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/DefaultFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DefaultFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/DigitalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DigitalFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/Loadable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/Loadable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Pb5Q1s77yWLzjMpH5Zypw0tb98" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/lama/Desktop/Технологии программирования/JDBCExample",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lama\Desktop\Технологии программирования\HibernateExample\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HibernateExample" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="HibernateExample" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9e6bd07-5fd8-4e81-a092-4a06223640eb" name="Changes" comment="" />
+      <created>1683712922276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683712922276</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

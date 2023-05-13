@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Main {
@@ -6,6 +7,8 @@ public class Main {
   public static void main(String[] args) throws IOException {
     try {
       DatabaseWorker worker = new DatabaseWorker();
+      DirtyDatabaseWorker dirtyDatabaseWorker = new DirtyDatabaseWorker();
+
       worker.createTableFromObject("default_frames", new DefaultFrame(), true);
       worker.createTableFromObject("digital_frames", new DigitalFrame(), true);
 
@@ -17,12 +20,18 @@ public class Main {
       ArrayList<DefaultFrame> defaultFrames = defaultFrameCSVFrameDataReader.readFrames();
       ArrayList<DigitalFrame> digitalFrames = digitalFrameCSVFrameDataReader.readFrames();
 
-      worker.loadObjectsToBase(defaultFrames, "default_frames");
       worker.loadObjectsToBase(digitalFrames, "digital_frames");
+      worker.loadObjectsToBase(defaultFrames, "default_frames");
 
-      worker.dirtyConnection("default_frames", "DELETE FROM default_frames WHERE id = 206",
-          new DefaultFrame()).join();
+      dirtyDatabaseWorker.dirtyReadAndRollback("SELECT * FROM digital_frames WHERE id = 961");
+      Thread.sleep(150);
+      worker.connection.createStatement().executeUpdate("DELETE FROM digital_frames WHERE id = 961");
 
+      System.out.println(worker.getById(311, 2).toString().concat("\n"));
+
+      for (Frame frame : worker.getAllObjects("digital_frames", 1)) {
+        System.out.println(frame);
+      }
     } catch (Exception e) {
       Journal.log(e.getMessage());
       System.out.println(e.getMessage());

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.url">jdbc:postgresql://localhost/taskFour</property>
+    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="connection.username">worker</property>
+    <property name="connection.password">C11m0LMjFbyd4fTK</property>
+    <property name="show_sql">false</property>
+<!--    <property name="format_sql">true</property>-->
+    <property name="hbm2ddl.auto">update</property>
+  </session-factory>
+</hibernate-configuration>

@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e6bd07-5fd8-4e81-a092-4a06223640eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frames.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BaseDOD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CSVReadable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vendor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storages.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DirtyDatabaseWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DatabaseWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/DefaultFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DefaultFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/DigitalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/DigitalFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/Loadable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/Loadable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JDBCExample/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBCExample/src/main/java/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="d9e6bd07-5fd8-4e81-a092-4a06223640eb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
